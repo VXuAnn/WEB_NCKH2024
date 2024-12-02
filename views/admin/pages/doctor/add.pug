@@ -1,0 +1,260 @@
+extends ../../layouts/default.pug
+block main
+  .main-wrapper
+    .page-wrapper
+      .content
+        .row
+          .col-lg-8.offset-lg-2
+            h4.page-title Add Doctor
+        .row
+          .col-lg-8.offset-lg-2
+            form
+              .row
+                .col-sm-6
+                  .form-group
+                    label
+                      | First Name 
+                      span.text-danger *
+                    input.form-control(type='text')
+                .col-sm-6
+                  .form-group
+                    label Last Name
+                    input.form-control(type='text')
+                .col-sm-6
+                  .form-group
+                    label
+                      | Username 
+                      span.text-danger *
+                    input.form-control(type='text')
+                .col-sm-6
+                  .form-group
+                    label
+                      | Email 
+                      span.text-danger *
+                    input.form-control(type='email')
+                .col-sm-6
+                  .form-group
+                    label Password
+                    input.form-control(type='password')
+                .col-sm-6
+                  .form-group
+                    label Confirm Password
+                    input.form-control(type='password')
+                .col-sm-6
+                  .form-group
+                    label Date of Birth
+                    .cal-icon
+                      input.form-control.datetimepicker(type='text')
+                .col-sm-6
+                  .form-group.gender-select
+                    label.gen-label Gender:
+                    .form-check-inline
+                      label.form-check-label
+                        input.form-check-input(type='radio' name='gender')
+                        | Male
+                    .form-check-inline
+                      label.form-check-label
+                        input.form-check-input(type='radio' name='gender')
+                        | Female
+                .col-sm-12
+                  .row
+                    .col-sm-12
+                      .form-group
+                        label Address
+                        input.form-control(type='text')
+                    .col-sm-6.col-md-6.col-lg-3
+                      .form-group
+                        label Country
+                        select.form-control.select
+                          option USA
+                          option United Kingdom
+                    .col-sm-6.col-md-6.col-lg-3
+                      .form-group
+                        label City
+                        input.form-control(type='text')
+                    .col-sm-6.col-md-6.col-lg-3
+                      .form-group
+                        label State/Province
+                        select.form-control.select
+                          option California
+                          option Alaska
+                          option Alabama
+                    .col-sm-6.col-md-6.col-lg-3
+                      .form-group
+                        label Postal Code
+                        input.form-control(type='text')
+                .col-sm-6
+                  .form-group
+                    label Phone 
+                    input.form-control(type='text')
+                .col-sm-6
+                  .form-group
+                    label Avatar
+                    .profile-upload
+                      .upload-img
+                        img(alt='' src='assets/img/user.jpg')
+                      .upload-input
+                        input.form-control(type='file')
+              .form-group
+                label Short Biography
+                textarea.form-control(rows='3' cols='30')
+              .form-group
+                label.display-block Status
+                .form-check.form-check-inline
+                  input#doctor_active.form-check-input(type='radio' name='status' value='option1' checked='')
+                  label.form-check-label(for='doctor_active')
+                    | Active
+                .form-check.form-check-inline
+                  input#doctor_inactive.form-check-input(type='radio' name='status' value='option2')
+                  label.form-check-label(for='doctor_inactive')
+                    | Inactive
+              .m-t-20.text-center
+                button.btn.btn-primary.submit-btn Create Doctor
+      .notification-box
+        .msg-sidebar.notifications.msg-noti
+          .topnav-dropdown-header
+            span Messages
+          #msg_list.drop-scroll.msg-list-scroll
+            ul.list-box
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar R
+                    .list-body
+                      span.message-author Richard Miles 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item.new-message
+                    .list-left
+                      span.avatar J
+                    .list-body
+                      span.message-author John Doe
+                      span.message-time 1 Aug
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar T
+                    .list-body
+                      span.message-author  Tarah Shropshire 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar M
+                    .list-body
+                      span.message-author Mike Litorus
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar C
+                    .list-body
+                      span.message-author  Catherine Manseau 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar D
+                    .list-body
+                      span.message-author  Domenic Houston 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar B
+                    .list-body
+                      span.message-author  Buster Wigton 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar R
+                    .list-body
+                      span.message-author  Rolland Webber 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar C
+                    .list-body
+                      span.message-author  Claire Mapes 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar M
+                    .list-body
+                      span.message-author Melita Faucher
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar J
+                    .list-body
+                      span.message-author Jeffery Lalor
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar L
+                    .list-body
+                      span.message-author Loren Gatlin
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar T
+                    .list-body
+                      span.message-author Tarah Shropshire
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+          .topnav-dropdown-footer
+            a(href='chat.html') See all messages
+  .sidebar-overlay(data-reff='')
+  script(src='assets/js/jquery-3.2.1.min.js')
+  script(src='assets/js/popper.min.js')
+  script(src='assets/js/bootstrap.min.js')
+  script(src='assets/js/jquery.slimscroll.js')
+  script(src='assets/js/select2.min.js')
+  script(src='assets/js/moment.min.js')
+  script(src='assets/js/bootstrap-datetimepicker.min.js')
+  script(src='assets/js/app.js')
+  // add-doctor24:06

@@ -1,0 +1,279 @@
+extends ../../layouts/default.pug
+block main
+  .main-wrapper
+    
+    .page-wrapper
+      .content
+        .row
+          .col-sm-8.col-4
+            h4.page-title Blog
+          .col-sm-4.col-8.text-right.m-b-30
+            a.btn.btn-primary.btn-rounded.float-right(href='/${prefixAdmin}/doctor/add')
+              i.fa.fa-plus
+              |  Add Blog
+        .row
+          .col-sm-6.col-md-6.col-lg-4
+            .blog.grid-blog
+              .blog-image
+                a(href='blog-details.html')
+                  img.img-fluid(src='/assets/img/blog/blog-01.jpg' alt='')
+              .blog-content
+                h3.blog-title
+                  a(href='blog-details.html') Do You Know the ABCs of Health Care?
+                p
+                  | Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor incididunt ut labore etmis dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco sit laboris.
+                a.read-more(href='blog-details.html')
+                  i.fa.fa-long-arrow-right
+                  |  Read More
+                .blog-info.clearfix
+                  .post-left
+                    ul
+                      li
+                        a(href='#.')
+                          i.fa.fa-calendar
+                          span December 6, 2017
+                  .post-right
+                    a(href='#.')
+                      i.fa.fa-heart-o
+                      | 21
+                    a(href='#.')
+                      i.fa.fa-eye
+                      | 8
+                    a(href='#.')
+                      i.fa.fa-comment-o
+                      | 17
+          .col-sm-6.col-md-6.col-lg-4
+            .blog.grid-blog
+              .blog-image
+                a(href='blog-details.html')
+                  img.img-fluid(src='/assets/img/blog/blog-02.jpg' alt='')
+              .blog-content
+                h3.blog-title
+                  a(href='blog-details.html') Do You Know the ABCs of Health Care?
+                p
+                  | Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor incididunt ut labore etmis dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco sit laboris.
+                a.read-more(href='blog-details.html')
+                  i.fa.fa-long-arrow-right
+                  |  Read More
+                .blog-info.clearfix
+                  .post-left
+                    ul
+                      li
+                        a(href='#.')
+                          i.fa.fa-calendar
+                          span December 6, 2017
+                  .post-right
+                    a(href='#.')
+                      i.fa.fa-heart-o
+                      | 21
+                    a(href='#.')
+                      i.fa.fa-eye
+                      | 8
+                    a(href='#.')
+                      i.fa.fa-comment-o
+                      | 17
+          .col-sm-6.col-md-6.col-lg-4
+            .blog.grid-blog
+              .blog-image
+                a(href='blog-details.html')
+                  img.img-fluid(src='/assets/img/blog/blog-03.jpg' alt='')
+              .blog-content
+                h3.blog-title
+                  a(href='blog-details.html') Do You Know the ABCs of Health Care?
+                p
+                  | Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor incididunt ut labore etmis dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco sit laboris.
+                a.read-more(href='blog-details.html')
+                  i.fa.fa-long-arrow-right
+                  |  Read More
+                .blog-info.clearfix
+                  .post-left
+                    ul
+                      li
+                        a(href='#.')
+                          i.fa.fa-calendar
+                          span December 6, 2017
+                  .post-right
+                    a(href='#.')
+                      i.fa.fa-heart-o
+                      | 21
+                    a(href='#.')
+                      i.fa.fa-eye
+                      | 8
+                    a(href='#.')
+                      i.fa.fa-comment-o
+                      | 17
+          .col-sm-6.col-md-6.col-lg-4
+            .blog.grid-blog
+              .blog-image
+                a(href='blog-details.html')
+                  img.img-fluid(src='/assets/img/blog/blog-04.jpg' alt='')
+              .blog-content
+                h3.blog-title
+                  a(href='blog-details.html') Do You Know the ABCs of Health Care?
+                p
+                  | Lorem ipsum dolor sit amet, consectetur em adipiscing elit, sed do eiusmod tempor incididunt ut labore etmis dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco sit laboris.
+                a.read-more(href='blog-details.html')
+                  i.fa.fa-long-arrow-right
+                  |  Read More
+                .blog-info.clearfix
+                  .post-left
+                    ul
+                      li
+                        a(href='#.')
+                          i.fa.fa-calendar
+                          span December 6, 2017
+                  .post-right
+                    a(href='#.')
+                      i.fa.fa-heart-o
+                      | 21
+                    a(href='#.')
+                      i.fa.fa-eye
+                      | 8
+                    a(href='#.')
+                      i.fa.fa-comment-o
+                      | 17
+      .notification-box
+        .msg-sidebar.notifications.msg-noti
+          .topnav-dropdown-header
+            span Messages
+          #msg_list.drop-scroll.msg-list-scroll
+            ul.list-box
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar R
+                    .list-body
+                      span.message-author Richard Miles 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item.new-message
+                    .list-left
+                      span.avatar J
+                    .list-body
+                      span.message-author John Doe
+                      span.message-time 1 Aug
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar T
+                    .list-body
+                      span.message-author  Tarah Shropshire 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar M
+                    .list-body
+                      span.message-author Mike Litorus
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar C
+                    .list-body
+                      span.message-author  Catherine Manseau 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar D
+                    .list-body
+                      span.message-author  Domenic Houston 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar B
+                    .list-body
+                      span.message-author  Buster Wigton 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar R
+                    .list-body
+                      span.message-author  Rolland Webber 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar C
+                    .list-body
+                      span.message-author  Claire Mapes 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar M
+                    .list-body
+                      span.message-author Melita Faucher
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar J
+                    .list-body
+                      span.message-author Jeffery Lalor
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar L
+                    .list-body
+                      span.message-author Loren Gatlin
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar T
+                    .list-body
+                      span.message-author Tarah Shropshire
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+          .topnav-dropdown-footer
+            a(href='chat.html') See all messages
+  .sidebar-overlay(data-reff='')
+  script(src='/assets/js/jquery-3.2.1.min.js')
+  script(src='/assets/js/popper.min.js')
+  script(src='/assets/js/bootstrap.min.js')
+  script(src='/assets/js/jquery.slimscroll.js')
+  script(src='/assets/js/app.js')
+  // blog23:51

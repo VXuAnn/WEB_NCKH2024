@@ -1,0 +1,381 @@
+extends ../../layouts/default.pug
+
+block main
+
+  .main-wrapper
+    .page-wrapper
+      .content
+        .row
+          .col-sm-8.col-6
+            h4.page-title Leave Request
+          .col-sm-4.col-6.text-right.m-b-30
+            a.btn.btn-primary.btn-rounded.float-right(href='add-leave.html')
+              i.fa.fa-plus
+              |  Add Leave
+        .row.filter-row
+          .col-sm-6.col-md-3.col-lg-3.col-xl-2.col-12
+            .form-group.form-focus
+              label.focus-label Employee Name
+              input.form-control.floating(type='text')
+          .col-sm-6.col-md-3.col-lg-3.col-xl-2.col-12
+            .form-group.form-focus.select-focus
+              label.focus-label Leave Type
+              select.select.floating
+                option  -- Select -- 
+                option Casual Leave
+                option Medical Leave
+                option Loss of Pay
+          .col-sm-6.col-md-3.col-lg-3.col-xl-2.col-12
+            .form-group.form-focus.select-focus
+              label.focus-label Leave Status
+              select.select.floating
+                option  -- Select -- 
+                option  Pending 
+                option  Approved 
+                option  Rejected 
+          .col-sm-6.col-md-3.col-lg-3.col-xl-2.col-12
+            .form-group.form-focus
+              label.focus-label From
+              .cal-icon
+                input.form-control.floating.datetimepicker(type='text')
+          .col-sm-6.col-md-3.col-lg-3.col-xl-2.col-12
+            .form-group.form-focus
+              label.focus-label To
+              .cal-icon
+                input.form-control.floating.datetimepicker(type='text')
+          .col-sm-6.col-md-3.col-lg-3.col-xl-2.col-12
+            a.btn.btn-success.btn-block(href='#')  Search 
+        .row
+          .col-md-12
+            .table-responsive
+              table.table.table-striped.custom-table.mb-0.datatable
+                thead
+                  tr
+                    th Employee
+                    th Leave Type
+                    th From
+                    th To
+                    th No of Days
+                    th Reason
+                    th.text-center Status
+                    th.text-right Actions
+                tbody
+                  tr
+                    td
+                      a.avatar(href='profile.html') R
+                      h2
+                        a(href='#')
+                          | Albina Simonis 
+                          span Nurse
+                    td Casual Leave
+                    td 8 Aug 2018
+                    td 8 Aug 2018
+                    td 2 days
+                    td Family Function
+                    td.text-center
+                      .dropdown.action-label
+                        a.custom-badge.status-purple.dropdown-toggle(href='#' data-toggle='dropdown' aria-expanded='false')
+                          | New
+                        .dropdown-menu.dropdown-menu-right
+                          a.dropdown-item(href='#') New
+                          a.dropdown-item(href='#') Pending
+                          a.dropdown-item(href='#') Approved
+                          a.dropdown-item(href='#') Declined
+                    td.text-right
+                      .dropdown.dropdown-action
+                        a.action-icon.dropdown-toggle(href='#' data-toggle='dropdown' aria-expanded='false')
+                          i.fa.fa-ellipsis-v
+                        .dropdown-menu.dropdown-menu-right
+                          a.dropdown-item(href='edit-leave.html')
+                            i.fa.fa-pencil.m-r-5
+                            |  Edit
+                          a.dropdown-item(href='#' title='Decline' data-toggle='modal' data-target='#delete_approve')
+                            i.fa.fa-trash-o.m-r-5
+                            |  Delete
+                  tr
+                    td
+                      a.avatar(href='profile.html') J
+                      h2
+                        a
+                          | Cristina Groves  
+                          span Doctor
+                    td Medical Leave
+                    td 13 Jul 2018
+                    td 15 Jul 2018
+                    td 3 days
+                    td Going to Vacation
+                    td.text-center
+                      .dropdown.action-label
+                        a.custom-badge.status-green.dropdown-toggle(href='#' data-toggle='dropdown' aria-expanded='false')
+                          | Approved
+                        .dropdown-menu.dropdown-menu-right
+                          a.dropdown-item(href='#') New
+                          a.dropdown-item(href='#') Pending
+                          a.dropdown-item(href='#') Approved
+                          a.dropdown-item(href='#') Declined
+                    td.text-right
+                      .dropdown.dropdown-action
+                        a.action-icon.dropdown-toggle(href='#' data-toggle='dropdown' aria-expanded='false')
+                          i.fa.fa-ellipsis-v
+                        .dropdown-menu.dropdown-menu-right
+                          a.dropdown-item(href='edit-leave.html')
+                            i.fa.fa-pencil.m-r-5
+                            |  Edit
+                          a.dropdown-item(href='#' title='Decline' data-toggle='modal' data-target='#delete_approve')
+                            i.fa.fa-trash-o.m-r-5
+                            |  Delete
+                  tr
+                    td
+                      a.avatar(href='profile.html') J
+                      h2
+                        a
+                          | Mary Mericle 
+                          span Accountant
+                    td Casual Leave
+                    td 27 Jun 2018
+                    td 28 Jun 2018
+                    td 2 days
+                    td Going to Native Place
+                    td.text-center
+                      .dropdown.action-label
+                        a.custom-badge.status-green.dropdown-toggle(href='#' data-toggle='dropdown' aria-expanded='false')
+                          | Approved
+                        .dropdown-menu.dropdown-menu-right
+                          a.dropdown-item(href='#') New
+                          a.dropdown-item(href='#') Pending
+                          a.dropdown-item(href='#') Approved
+                          a.dropdown-item(href='#') Declined
+                    td.text-right
+                      .dropdown.dropdown-action
+                        a.action-icon.dropdown-toggle(href='#' data-toggle='dropdown' aria-expanded='false')
+                          i.fa.fa-ellipsis-v
+                        .dropdown-menu.dropdown-menu-right
+                          a.dropdown-item(href='edit-leave.html')
+                            i.fa.fa-pencil.m-r-5
+                            |  Edit
+                          a.dropdown-item(href='#' title='Decline' data-toggle='modal' data-target='#delete_approve')
+                            i.fa.fa-trash-o.m-r-5
+                            |  Delete
+                  tr
+                    td
+                      a.avatar(href='profile.html') H
+                      h2
+                        a
+                          | Haylie Feeney  
+                          span Laboratorist
+                    td Casual Leave
+                    td 13 May 2018
+                    td 13 May 2018
+                    td 2 days
+                    td Not feeling well
+                    td.text-center
+                      .dropdown.action-label
+                        a.custom-badge.status-red.dropdown-toggle(href='#' data-toggle='dropdown' aria-expanded='false')
+                          | Declined
+                        .dropdown-menu.dropdown-menu-right
+                          a.dropdown-item(href='#') New
+                          a.dropdown-item(href='#') Pending
+                          a.dropdown-item(href='#') Approved
+                          a.dropdown-item(href='#') Declined
+                    td.text-right
+                      .dropdown.dropdown-action
+                        a.action-icon.dropdown-toggle(href='#' data-toggle='dropdown' aria-expanded='false')
+                          i.fa.fa-ellipsis-v
+                        .dropdown-menu.dropdown-menu-right
+                          a.dropdown-item(href='edit-leave.html')
+                            i.fa.fa-pencil.m-r-5
+                            |  Edit
+                          a.dropdown-item(href='#' title='Decline' data-toggle='modal' data-target='#delete_approve')
+                            i.fa.fa-trash-o.m-r-5
+                            |  Delete
+                  tr
+                    td
+                      a.avatar(href='profile.html') R
+                      h2
+                        a
+                          | Zoe Butler 
+                          span Pharmacist
+                    td Casual Leave
+                    td 31 Mar 2018
+                    td 31 Mar 2018
+                    td 2 days
+                    td Birthday Function
+                    td.text-center
+                      .dropdown.action-label
+                        a.custom-badge.status-purple.dropdown-toggle(href='#' data-toggle='dropdown' aria-expanded='false')
+                          | New
+                        .dropdown-menu.dropdown-menu-right
+                          a.dropdown-item(href='#') New
+                          a.dropdown-item(href='#') Pending
+                          a.dropdown-item(href='#') Approved
+                          a.dropdown-item(href='#') Declined
+                    td.text-right
+                      .dropdown.dropdown-action
+                        a.action-icon.dropdown-toggle(href='#' data-toggle='dropdown' aria-expanded='false')
+                          i.fa.fa-ellipsis-v
+                        .dropdown-menu.dropdown-menu-right
+                          a.dropdown-item(href='edit-leave.html')
+                            i.fa.fa-pencil.m-r-5
+                            |  Edit
+                          a.dropdown-item(href='#' title='Decline' data-toggle='modal' data-target='#delete_approve')
+                            i.fa.fa-trash-o.m-r-5
+                            |  Delete
+      .notification-box
+        .msg-sidebar.notifications.msg-noti
+          .topnav-dropdown-header
+            span Messages
+          #msg_list.drop-scroll.msg-list-scroll
+            ul.list-box
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar R
+                    .list-body
+                      span.message-author Richard Miles 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item.new-message
+                    .list-left
+                      span.avatar J
+                    .list-body
+                      span.message-author John Doe
+                      span.message-time 1 Aug
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar T
+                    .list-body
+                      span.message-author  Tarah Shropshire 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar M
+                    .list-body
+                      span.message-author Mike Litorus
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar C
+                    .list-body
+                      span.message-author  Catherine Manseau 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar D
+                    .list-body
+                      span.message-author  Domenic Houston 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar B
+                    .list-body
+                      span.message-author  Buster Wigton 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar R
+                    .list-body
+                      span.message-author  Rolland Webber 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar C
+                    .list-body
+                      span.message-author  Claire Mapes 
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar M
+                    .list-body
+                      span.message-author Melita Faucher
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar J
+                    .list-body
+                      span.message-author Jeffery Lalor
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar L
+                    .list-body
+                      span.message-author Loren Gatlin
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+              li
+                a(href='chat.html')
+                  .list-item
+                    .list-left
+                      span.avatar T
+                    .list-body
+                      span.message-author Tarah Shropshire
+                      span.message-time 12:28 AM
+                      .clearfix
+                      span.message-content Lorem ipsum dolor sit amet, consectetur adipiscing
+          .topnav-dropdown-footer
+            a(href='chat.html') See all messages
+    #delete_approve.modal.fade.delete-modal(role='dialog')
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .modal-body.text-center
+            img(src='assets/img/sent.png' alt='' width='50' height='46')
+            h3 Are you sure want to delete this Leave Request?
+            .m-t-20
+              a.btn.btn-white(href='#' data-dismiss='modal') Close
+              button.btn.btn-danger(type='submit') Delete
+  .sidebar-overlay(data-reff='')
+  script(src='assets/js/jquery-3.2.1.min.js')
+  script(src='assets/js/popper.min.js')
+  script(src='assets/js/bootstrap.min.js')
+  script(src='assets/js/jquery.dataTables.min.js')
+  script(src='assets/js/dataTables.bootstrap4.min.js')
+  script(src='assets/js/jquery.slimscroll.js')
+  script(src='assets/js/select2.min.js')
+  script(src='assets/js/moment.min.js')
+  script(src='assets/js/bootstrap-datetimepicker.min.js')
+  script(src='assets/js/app.js')
+  // leaves23:23
